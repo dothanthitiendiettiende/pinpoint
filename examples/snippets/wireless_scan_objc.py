@@ -16,11 +16,10 @@ def wireless_scan():
 
     """
     iface = CWInterface.interface()
-    dummy_result, error = iface.scanForNetworksWithName_includeHidden_error_(
+    results, error = iface.scanForNetworksWithName_includeHidden_error_(
         None, True, None)
     if error:
         return error
-    results = iface.cachedScanResults()
     values = []
     for i in results:
         if i.ssid() is None:

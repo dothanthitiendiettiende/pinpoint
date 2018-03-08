@@ -659,13 +659,12 @@ class wireless(object):
         """
         values = []
         logging.info("Scanning for wireless networks...")
-        dummy_result, error = self.iface.\
+        results, error = self.iface.\
             scanForNetworksWithName_includeHidden_error_(None, True, None)
         if error:
             logging.debug("Error scanning for wireless networks: {}"
                           "".format(str(error)))
             return values
-        results = self.iface.cachedScanResults()
         for i in results:
             if i.ssid() is None:
                 continue
