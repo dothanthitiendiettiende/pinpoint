@@ -4,7 +4,7 @@ import plistlib
 
 
 def wireless_scan():
-    """Scan aviable wireless networks.
+    """Scan available wireless networks.
 
     Returns:
         Sorted array of dictionaries with rssi, bssid, and ssid_str from

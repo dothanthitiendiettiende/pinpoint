@@ -650,7 +650,7 @@ class wireless(object):
         return wifi_power
 
     def wireless_scan(self):
-        """Scan aviable wireless networks.
+        """Scan available wireless networks.
 
         Returns:
             Sorted array of dictionaries with rssi, bssid, and ssid_str from
